@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/artist' do # index
-  @artist = Artist.all()
+  @artists = Artist.all()
   erb( :artist_index )
 end
 
@@ -27,5 +27,5 @@ end
 post '/artist/new' do
   @artist = Artist.new(params)
   @artist.save
-  erb(:create_artist)
+  redirect to ('/artist')
 end
