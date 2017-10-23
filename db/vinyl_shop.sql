@@ -1,5 +1,5 @@
-DROP TABLE artists;
 DROP TABLE albums;
+DROP TABLE artists;
 
 
 CREATE TABLE artists(
@@ -12,5 +12,5 @@ CREATE TABLE albums(
   title VARCHAR(255),
   genre VARCHAR(255),
   quantity INT4,
-  artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE,
+  artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE
 );

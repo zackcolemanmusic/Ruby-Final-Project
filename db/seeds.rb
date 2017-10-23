@@ -15,23 +15,23 @@ artist_3 = Artist.new({
 
 
 album_1 = Album.new({
-  "title" => "Blacked Out Windows"
-  "genre" => "Techno"
-  "quantity" => 4
+  "title" => "Blacked Out Windows",
+  "genre" => "Techno",
+  "quantity" => 4,
   "artist_id" => 1
 })
 
 album_2 = Album.new({
-  "title" => "Flashed"
-  "genre" => "Minimal, Techno"
-  "quantity" => 6
+  "title" => "Flashed",
+  "genre" => "Minimal, Techno",
+  "quantity" => 6,
   "artist_id" => 2
 })
 
 album_3 = Album.new({
-  "title" => "Stepping Stones"
-  "genre" => "Melodic, Techno"
-  "quantity" => 10
+  "title" => "Stepping Stones",
+  "genre" => "Melodic, Techno",
+  "quantity" => 10,
   "artist_id" => 3
 })
 
