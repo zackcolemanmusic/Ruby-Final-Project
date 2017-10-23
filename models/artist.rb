@@ -17,6 +17,12 @@ class Artist
     @id = name_data.first()['id'].to_i()
   end
 
-  
+  def self.find(id)
+  sql = "SELECT * FROM artists WHERE id = $1"
+  values = [id]
+  artist = SqlRunner.run(sql, values)
+  result = Artist.new(artist.first)
+  return result
+  end
 
 end
