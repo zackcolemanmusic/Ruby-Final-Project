@@ -42,13 +42,14 @@ class Album
   return result
   end
 
-
-  if @quantity == 1..4
-    return "LOW"
-  elsif @quantity == 5..7
-    return "MEDIUM"
-  elsif @quantity == 8..15
-    return "HIGH"
+  def stock_checker
+    if @quantity == 1..4
+      return "LOW"
+    elsif @quantity == 5..7
+      return "MEDIUM"
+    elsif @quantity == 8..15
+      return "HIGH"
+    end
   end
 
 end
