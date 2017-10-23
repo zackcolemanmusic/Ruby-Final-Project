@@ -1,14 +1,17 @@
 <table>
-  <tr><th> Album Title </th>
+  <tr><th> Artist</th>
+    <th> Album Title </th>
     <th> Genre </th>
     <th> Quantity </th>
-    <th> Artist </th>
+    <th> Stock Level </th>
   </tr>
 <% @album.each do |album| %>
-<tr> <td> <%= album.title %></td>
+<tr>
+  <td> <%= Artist.find(album.artist_id).name %></td>
+  <td> <%= album.title %></td>
   <td> <%= album.genre %></td>
   <td> <%= album.quantity %></td>
-  <td> <%= Artist.find(album.artist_id).name %></td>
+  <td> <%= album.stock_checker %></td>
 </tr>
 
 <% end %>
