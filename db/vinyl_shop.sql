@@ -1,0 +1,4 @@
+CREATE TABLE artists(
+  id SERIAL4 PRIMARY KEY,
+  name VARCHAR(255)
+);
