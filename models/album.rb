@@ -43,4 +43,12 @@ class Album
   end
 
 
+  if @quantity == 1..4
+    return "LOW"
+  elsif @quantity == 5..7
+    return "MEDIUM"
+  elsif @quantity == 8..15
+    return "HIGH"
+  end
+
 end
