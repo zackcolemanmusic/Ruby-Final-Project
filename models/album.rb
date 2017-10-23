@@ -38,7 +38,7 @@ class Album
   sql = "SELECT * FROM albums"
   values = []
   album = SqlRunner.run( sql, values )
-  result = album.map { |pizza| Album.new( album ) }
+  result = album.map { |album| Album.new( album ) }
   return result
   end
 
