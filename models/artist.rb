@@ -17,4 +17,6 @@ class Artist
     @id = name_data.first()['id'].to_i()
   end
 
+  
+
 end
