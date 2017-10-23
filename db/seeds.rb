@@ -1,5 +1,6 @@
 require_relative('../models/album')
 require_relative('../models/artist')
+require('pry')
 
 artist_1 = Artist.new({
   "name" => "Byron Gilliam"
@@ -43,3 +44,6 @@ artist_3.save
 album_1.save
 album_2.save
 album_3.save
+
+binding.pry
+nil 

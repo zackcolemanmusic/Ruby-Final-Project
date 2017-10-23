@@ -9,7 +9,7 @@ class Album
     @id = options['id'].to_i()
     @title = options['title']
     @genre = options['genre']
-    @quantity = options['quantity']
+    @quantity = options['quantity'].to_i
     @artist_id = options['artist_id']
   end
 
@@ -43,11 +43,11 @@ class Album
   end
 
   def stock_checker
-    if @quantity == 1..4
+    if @quantity.between?(1,4)
       return "LOW"
-    elsif @quantity == 5..7
+    elsif @quantity.between?(5,7)
       return "MEDIUM"
-    elsif @quantity == 8..15
+    elsif @quantity.between?(8,15)
       return "HIGH"
     end
   end
