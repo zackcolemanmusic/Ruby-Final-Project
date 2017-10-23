@@ -34,7 +34,13 @@ class Album
   return result
   end
 
-
+  def self.all()
+  sql = "SELECT * FROM albums"
+  values = []
+  album = SqlRunner.run( sql, values )
+  result = album.map { |pizza| Album.new( album ) }
+  return result
+  end
 
 
 end
