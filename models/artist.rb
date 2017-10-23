@@ -25,4 +25,12 @@ class Artist
   return result
   end
 
+  def self.all()
+  sql = "SELECT * FROM artists"
+  values = []
+  artist = SqlRunner.run( sql, values )
+  result = artist.map { |artist| Artist.new( artist ) }
+  return result
+  end
+
 end

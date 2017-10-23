@@ -1,0 +1,18 @@
+<table>
+  <tr><th> Album Title </th>
+    <th> Genre </th>
+    <th> Quantity </th>
+    <th> Artist </th>
+  </tr>
+<% @album.each do |album| %>
+<tr> <td> <%= album.title %></td>
+  <td> <%= album.genre %></td>
+  <td> <%= album.quantity %></td>
+  <td> <%= Artist.find(album.artist_id).name %></td>
+</tr>
+
+<% end %>
+
+
+
+</table>
