@@ -4,6 +4,8 @@
     <th> Genre </th>
     <th> Quantity </th>
     <th> Stock Level </th>
+    <th> Buy Price </th>
+    <th> Sell Price </th>
   </tr>
 <% @album.each do |album| %>
 <tr>
@@ -12,6 +14,8 @@
   <td> <%= album.genre %></td>
   <td> <%= album.quantity %></td>
   <td> <%= album.stock_checker %></td>
+  <td> <%= album.buy_price %></td>
+  <td> <%= album.sell_price %></td>
 </tr>
 
 <% end %>
