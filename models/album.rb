@@ -47,7 +47,7 @@ class Album
       return "LOW"
     elsif @quantity.between?(5,7)
       return "MEDIUM"
-    elsif @quantity.between?(8,15)
+    elsif @quantity >= 8
       return "HIGH"
     end
   end
@@ -56,6 +56,29 @@ class Album
     sql = "DELETE FROM albums"
     values = []
     SqlRunner.run(sql, values)
+  end
+
+  def update()
+  sql = "UPDATE albums
+  SET
+  (
+    title,
+    genre,
+    quantity
+  ) =
+  (
+    $1, $2, $3,
+  )
+  WHERE id = $4"
+  values = [@title, @genre, @quantity]
+  SqlRunner.run( sql, values )
+  end
+
+  def delete()
+  sql = "DELETE FROM albums
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run( sql, values )
   end
 
 end

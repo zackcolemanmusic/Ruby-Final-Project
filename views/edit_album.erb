@@ -1,0 +1,33 @@
+<form method="post" action="/album/<%=@album.id%>">
+  <label for="name">Album Name:</label>
+  <input
+  type="text"
+  name="title"
+  id="name"
+  value = "<%= @album.title %>"
+  />
+
+  <label for="artist-id">Artist:</label>
+  <select name="artist_id">
+    <% for artist in @artists %>
+      <option value="<%=artist.id%>"> <%=artist.name %> </option>
+    <%end%>
+  </select>
+
+
+  <label for="genre">Genre:</label>
+  <select name="genre">
+    <option value="Techno"> Techno </option>
+    <option value="Tech-house"> Tech-house </option>
+    <option value="Melodic"> Melodic Techno </option>
+    <option value="House"> House </option>
+    <option value="Acid"> Acid </option>
+  </select>
+
+  <label for="quantity">quantity:</label>
+    <input type="number" name="quantity" id="quantity" value = "<%= @album.quantity %>"/> 
+
+
+
+    <input type = "submit" value = "Update Album!">
+</form>

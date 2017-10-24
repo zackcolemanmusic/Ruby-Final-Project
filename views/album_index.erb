@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th> Album Title </th>
+    <th> Genre </th>
+  </tr>
+  <% @album.each do |album| %>
+    <tr>
+    <td>  <%= album.title %> </td>
+    <td>  <%= album.genre %> </td>
+    <td><form method="post" action="/album/<%=album.id%>/delete">
+      <input type = "submit" value = "Delete Album!">
+    </form></td>
+    </tr>
+    <% end %>
+</table>
+
+<form method="get" action="/album/new">
+
+<input type = "submit" value = "Create New Album!">
+</form>
