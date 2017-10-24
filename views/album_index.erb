@@ -2,11 +2,15 @@
   <tr>
     <th> Album Title </th>
     <th> Genre </th>
+    <th> Buy Price </th>
+    <th> Sell Price </th>
   </tr>
   <% @album.each do |album| %>
     <tr>
     <td>  <%= album.title %> </td>
     <td>  <%= album.genre %> </td>
+    <td>  <%= album.buy_price %> </td>
+    <td>  <%= album.sell_price %> </td>
     <td><form method="post" action="/album/<%=album.id%>/delete">
       <input type = "submit" value = "Delete Album!">
     </form></td>
