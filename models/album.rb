@@ -10,6 +10,8 @@ class Album
     @title = options['title']
     @genre = options['genre']
     @quantity = options['quantity'].to_i
+    @buy_price = options['buy_price'].to_i
+    @sell_price = options['sell_price'].to_i
     @artist_id = options['artist_id']
   end
 
@@ -19,9 +21,9 @@ class Album
   genre,
   quantity,
   artist_id)
-  VALUES ($1, $2, $3, $4)
+  VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING *"
-  values =[@title, @genre, @quantity, @artist_id]
+  values =[@title, @genre, @quantity, @buy_price, @sell_price, @artist_id]
   album_data = SqlRunner.run(sql, values)
   @id = album_data.first()['id'].to_i()
   end
@@ -67,10 +69,10 @@ class Album
     quantity
   ) =
   (
-    $1, $2, $3,
+    $1, $2, $3, $4, $5
   )
-  WHERE id = $4"
-  values = [@title, @genre, @quantity]
+  WHERE id = $6"
+  values = [@title, @genre, @quantity, @buy_price, @sell_price]
   SqlRunner.run( sql, values )
   end
 
