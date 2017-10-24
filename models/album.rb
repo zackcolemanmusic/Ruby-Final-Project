@@ -20,6 +20,8 @@ class Album
   title,
   genre,
   quantity,
+  buy_price,
+  sell_price,
   artist_id)
   VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING *"

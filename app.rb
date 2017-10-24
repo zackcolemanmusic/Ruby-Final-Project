@@ -24,6 +24,14 @@ post '/artist/new' do
   @artist.save
   redirect to ('/artist')
 end
+
+post '/artist/:id/delete' do
+  artist = Artist.find( params[:id] )
+  artist.delete()
+  redirect to '/home'
+end
+
+
 #--------------------------------#
 get '/album' do
   @album = Album.all()

@@ -27,6 +27,8 @@ album_1 = Album.new({
   "title" => "Blacked Out Windows",
   "genre" => "Techno",
   "quantity" => 4,
+  "buy_price" => 4,
+  "sell_price" => 6,
   "artist_id" => artist_1.id
 })
 
@@ -34,6 +36,8 @@ album_2 = Album.new({
   "title" => "Flashed",
   "genre" => "Minimal, Techno",
   "quantity" => 6,
+  "buy_price" => 5,
+  "sell_price" => 6,
   "artist_id" => artist_2.id
 })
 
@@ -41,6 +45,8 @@ album_3 = Album.new({
   "title" => "Stepping Stones",
   "genre" => "Melodic, Techno",
   "quantity" => 10,
+  "buy_price" => 3,
+  "sell_price" => 5,
   "artist_id" => artist_3.id
 })
 
