@@ -1,10 +1,13 @@
 nav ul {
   display:flex;
   list-style: none;
+
 }
 nav ul a {
   padding:10px;
   background:#00ced1;
+  text-decoration: none;
+  color: white;
 }
 
 li a:hover {
@@ -13,7 +16,9 @@ li a:hover {
   }
 
 body {
+font-family: arial;
 background: #008b8b;
+font-size: 15px;
 }
 
 header {
@@ -28,6 +33,7 @@ header {
   margin: 5px;
   color: white;
   margin-top: 50px;
+  text-decoration: none;
 }
 .button:hover {
     background-color: #555;
@@ -41,8 +47,37 @@ li {
 table {
   margin-bottom: 25px;
   border-collapse: collapse;
+  width: 100%;
+  color: white;
 }
 
 td{
-  border: 1px solid black;
+  border: 1px solid white;
+  padding: 2px;
+}
+
+.banner{ background-image: url("./pic.jpg");
+margin:15px;
+height: 350px;
+
+}
+ h1 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  background-color: #008b8b;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+
+}
+p {
+  text-align: center;
+  color: white;
+  padding: 1px;
+  background-color: #008b8b;
+  margin-top: 0;
+
+}
+th{
+  padding-bottom: 5px;
 }
