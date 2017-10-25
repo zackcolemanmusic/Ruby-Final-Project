@@ -1,0 +1,48 @@
+nav ul {
+  display:flex;
+  list-style: none;
+}
+nav ul a {
+  padding:10px;
+  background:#00ced1;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+body {
+background: #008b8b;
+}
+
+header {
+  background: #00ced1;
+  padding:10px;
+
+}
+
+.button {
+  background-color: #00ced1;
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  margin-top: 50px;
+}
+.button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+li {
+  list-style-type: none;
+}
+
+table {
+  margin-bottom: 25px;
+  border-collapse: collapse;
+}
+
+td{
+  border: 1px solid black;
+}

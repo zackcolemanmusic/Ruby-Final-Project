@@ -1,12 +1,22 @@
-<ul> <% @artists.each do |artist| %>
-
-  <li> <%= artist.name %>
-    <li><form method="post" action="/artist/<%=artist.id%>/delete">
-      <input type = "submit" value = "Delete Artist!">
-    </form></li>
-</li> <% end %> </ul>
-
-
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+    </tr>
+  </thead>
+  <% @artists.each do |artist| %>
+  <tbody>
+    <tr>
+      <td><%= artist.name %></td>
+      <td>
+        <form method="post" action="/artist/<%=artist.id%>/delete">
+          <input type = "submit" value = "Delete Artist!">
+        </form>
+      </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
 
 <a class="button" href="/artist/new"> Create Artist </a>
 <a class="button" href="/album/new"> Create Album </a>
