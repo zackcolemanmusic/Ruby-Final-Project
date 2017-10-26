@@ -24,8 +24,14 @@
     <option value="Acid"> Acid </option>
   </select>
 
-  <label for="quantity">quantity:</label>
-    <input type="number" name="quantity" id="quantity" value = "<%= @album.quantity %>"/> 
+  <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity" value = "<%= @album.quantity %>"/>
+
+    <label for="buy_price"> Buy Price:</label>
+    <input type="number" name="buy_price" id="buy_price" value = "<%= @album.buy_price %>"/>
+
+    <label for="sell_price"> Sell Price:</label>
+    <input type="number" name="sell_price" id="sell_price" value = "<%= @album.sell_price %>"/>
 
 
 
